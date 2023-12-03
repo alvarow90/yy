@@ -1,0 +1,95 @@
+/* Base styles for the Pokémon team container */
+.pokemon-team {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  max-height: 100vh;
+  overflow-y: auto; /* Keeps existing scrolling functionality */
+  background-color: orange;
+  box-shadow: 2px 2px 5px rgba(223, 17, 17, 0.2);
+  padding: 10px;
+  z-index: 10000;
+  display: flex; /* New */
+  flex-direction: column; /* New */
+  justify-content: flex-start; /* New */
+  align-items: center; /* New */
+}
+
+/* Adjustments for individual Pokémon cards */
+.pokemon-card {
+  margin-bottom: 10px; /* Reduced to save space */
+  width: 90%; /* Ensure the cards fit within the container */
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+  background-color: beige; /* Pokémon theme: white card */
+  border: 2px solid #3d7dca; /* Pokémon theme: blue border */
+  border-radius: 10px;
+  padding: 1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  cursor: pointer;
+  border: 2px solid #3d7dca; /* Example border: 2px solid blue */
+  border-radius: 10px;
+}
+
+/* Ensuring that the cards are not too large on hover */
+.pokemon-card:hover {
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Styles for the stats within the cards */
+.pokemon-stats {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.pokemon-stats h4 {
+  margin: 0 0 10px 0;
+}
+
+.pokemon-stats ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.pokemon-stats li {
+  margin-bottom: 5px;
+}
+
+/* Grid layout for the main Pokémon display area */
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0 10px; /* Add padding to ensure content doesn't touch the edges */
+}
+
+@media screen and (max-width: 768px) {
+  /* Adjust the grid to a single column on smaller screens */
+  .pokemon-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Adjust the width of the Pokémon team container on smaller screens */
+  .pokemon-team {
+    width: 100%; /* Full width */
+    height: 150px; /* Fixed height */
+    flex-direction: row; /* Layout team members in a row */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    overflow-y: hidden; /* Remove vertical scrolling */
+    align-items: stretch; /* Stretch items to fill height */
+  }
+
+  /* Adjust the Pokémon card size on smaller screens to ensure all are visible */
+  .pokemon-card {
+    flex: 0 0 auto; /* Do not grow, do not shrink, and don't allow wrapping */
+    width: 30%; /* Adjust width to show multiple cards at once */
+    margin: 5px; /* Adjust margins to save space */
+  }
+}
+
+.type-fire { background-color: #F08030; }
+.type-water { background-color: #6890F0; }
+.type-grass { background-color: #78C850; }
+/* ... y así para cada tipo de Pokémon */
