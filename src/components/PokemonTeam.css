@@ -96,7 +96,7 @@
   }
 
   .pokemon-card {
-    width: 67%; /* Ajuste de tamaño para tarjetas en pantallas muy pequeñas */
+    width: 97%; /* Ajuste de tamaño para tarjetas en pantallas muy pequeñas */
     /* Otros ajustes para tarjetas en móviles */
   }
 }
