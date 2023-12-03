@@ -89,7 +89,42 @@
   }
 }
 
-.type-fire { background-color: #F08030; }
-.type-water { background-color: #6890F0; }
-.type-grass { background-color: #78C850; }
-/* ... y así para cada tipo de Pokémon */
+@media screen and (max-width: 480px) {
+  .pokemon-team {
+    height: 50px; /* Altura más pequeña */
+    /* Otros ajustes específicos para móviles */
+  }
+
+  .pokemon-card {
+    width: 67%; /* Ajuste de tamaño para tarjetas en pantallas muy pequeñas */
+    /* Otros ajustes para tarjetas en móviles */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.5em; /* Tamaño de fuente más pequeño para h1 en tablets */
+  }
+
+  .pokemon-card {
+    margin-bottom: 15px; /* Espaciado más reducido entre tarjetas */
+  }
+
+  .pokemon-stats {
+    padding: 8px; /* Padding más pequeño */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 2em; /* Tamaño de fuente más pequeño para h1 en móviles */
+  }
+
+  .pokemon-card {
+    margin-bottom: 10px; /* Espaciado aún más reducido entre tarjetas */
+  }
+
+  .pokemon-stats {
+    padding: 5px; /* Padding aún más pequeño */
+  }
+}

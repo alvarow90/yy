@@ -218,3 +218,62 @@
   }
 }
 
+/* Estilos por defecto */
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .pokemon-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .pokemon-grid {
+      grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pokemon-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas para tablets */
+  }
+
+  .logo {
+    height: 15em; /* Reducir tamaño del logo */
+  }
+
+  .boton-ver-equipo {
+    width: 150px; /* Reducir tamaño del botón */
+    font-size: 14px; /* Ajustar tamaño de fuente */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pokemon-grid {
+    grid-template-columns: 1fr; /* 1 columna para móviles */
+  }
+
+  .logo {
+    height: 10em; /* Reducir aún más el tamaño del logo */
+  }
+
+  .boton-ver-equipo {
+    width: 120px; /* Reducir más el tamaño del botón */
+    font-size: 12px; /* Ajustar tamaño de fuente */
+  }
+
+  .pokemon-header,
+  .stat-container {
+    flex-direction: column; /* Cambiar a disposición vertical */
+    align-items: flex-start;
+  }
+
+  .stat-name, .stat-bar, .stat-value {
+    width: 100%; /* Ajustar anchura al contenedor */
+  }
+}
